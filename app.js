@@ -5,9 +5,6 @@ const yargs = require('yargs');
 // custom package
 const notes = require('./notes.js');
 
-//const user = os.userInfo();
-//notes.writeLine('dev.log', `Executed by ${user.username}`);
-
 const argv = yargs.argv;
 const command = argv._[0];
 

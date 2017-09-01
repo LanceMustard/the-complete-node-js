@@ -30,22 +30,34 @@ var addNote = (title, body) => {
 };
 
 var getAll = () => {
-	console.log('getAll');
+	return fetchNotes();
 };
 
 var readNote = (title) => {
-	console.log('readNote: ', title);
+	var notes = fetchNotes();
+	var found = notes.filter((note) => note.title === title);
+	if (found.length > 0) {
+		return found[0];
+	}
 };
 
 var removeNote = (title) => {
-	console.log('removeNote: ', title);
+	var notes = fetchNotes();
+	saveNotes(notes.filter((note) => note.title != title));
+};
+
+var logNote = (note) => {
+	console.log('---');
+	console.log('Title:', note.title);
+	console.log('Body:', note.body);
 };
 
 module.exports = {
 	addNote,
 	getAll,
 	readNote,
-	removeNote
+	removeNote,
+	logNote
 };
 
 /*

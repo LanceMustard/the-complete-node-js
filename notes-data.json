@@ -1,1 +1,1 @@
-[{"title":"Test","body":"This is a test note"}]
+[{"title":"Test","body":"This is a test note"},{"title":"surfacePro","body":"Added from my surface pro"},{"title":"Another","body":"This note was added with alias command line parameters"},{"title":"New","body":"New Note"},{"title":["New","New Note"],"body":true},{"title":[true,"New Note"],"body":true}]
